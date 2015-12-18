@@ -13,6 +13,7 @@
 		2CDFEE901C23EA5D007BF68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */; };
 		2CDFEE931C23EA5D007BF68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE911C23EA5D007BF68E /* LaunchScreen.storyboard */; };
 		2CDFEE9B1C23EA8A007BF68E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE9A1C23EA8A007BF68E /* .gitignore */; };
+		E8F24B2C8EC296347AB47664 /* Pods_monochrome_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671D65A59975B7AE747FD401 /* Pods_monochrome_social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		2CDFEE921C23EA5D007BF68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CDFEE941C23EA5D007BF68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CDFEE9A1C23EA8A007BF68E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		47D324BA66B4CCBEB25E0428 /* Pods-monochrome-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monochrome-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social.debug.xcconfig"; sourceTree = "<group>"; };
+		671D65A59975B7AE747FD401 /* Pods_monochrome_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_monochrome_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E463500036B718CBB39084AE /* Pods-monochrome-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monochrome-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F24B2C8EC296347AB47664 /* Pods_monochrome_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 				2CDFEE9A1C23EA8A007BF68E /* .gitignore */,
 				2CDFEE871C23EA5D007BF68E /* monochrome-social */,
 				2CDFEE861C23EA5D007BF68E /* Products */,
+				A061349A5B8419AEEC0674D8 /* Pods */,
+				A152C5604E2781029AA3BCE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "monochrome-social";
 			sourceTree = "<group>";
 		};
+		A061349A5B8419AEEC0674D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47D324BA66B4CCBEB25E0428 /* Pods-monochrome-social.debug.xcconfig */,
+				E463500036B718CBB39084AE /* Pods-monochrome-social.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A152C5604E2781029AA3BCE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				671D65A59975B7AE747FD401 /* Pods_monochrome_social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CDFEE971C23EA5D007BF68E /* Build configuration list for PBXNativeTarget "monochrome-social" */;
 			buildPhases = (
+				2DEF3D8041C3A2BDC18A6994 /* Check Pods Manifest.lock */,
 				2CDFEE811C23EA5D007BF68E /* Sources */,
 				2CDFEE821C23EA5D007BF68E /* Frameworks */,
 				2CDFEE831C23EA5D007BF68E /* Resources */,
+				B12E7B268DC78F47498FC7F7 /* Embed Pods Frameworks */,
+				79AE2787C7AFA67E9D6B2304 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DEF3D8041C3A2BDC18A6994 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79AE2787C7AFA67E9D6B2304 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12E7B268DC78F47498FC7F7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CDFEE811C23EA5D007BF68E /* Sources */ = {
@@ -251,6 +326,7 @@
 		};
 		2CDFEE981C23EA5D007BF68E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D324BA66B4CCBEB25E0428 /* Pods-monochrome-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "monochrome-social/Info.plist";
@@ -263,6 +339,7 @@
 		};
 		2CDFEE991C23EA5D007BF68E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E463500036B718CBB39084AE /* Pods-monochrome-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "monochrome-social/Info.plist";
@@ -292,6 +369,7 @@
 				2CDFEE991C23EA5D007BF68E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

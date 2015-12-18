@@ -1,0 +1,59 @@
+PODS:
+  - AFDateHelper (3.1.1)
+  - Alamofire (3.1.4)
+  - AlamofireImage (2.2.0):
+    - Alamofire (~> 3.1)
+  - AmazonS3RequestManager (0.9.1):
+    - Alamofire (~> 3.0)
+    - SWXMLHash (~> 2.0)
+  - Bolts (1.5.0):
+    - Bolts/AppLinks (= 1.5.0)
+    - Bolts/Tasks (= 1.5.0)
+  - Bolts/AppLinks (1.5.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.5.0)
+  - FBSDKCoreKit (4.8.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.8.0)
+    - FBSDKCoreKit/no-arc (= 4.8.0)
+  - FBSDKCoreKit/arc (4.8.0):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.8.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - FBSDKLoginKit (4.8.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.8.0):
+    - FBSDKCoreKit
+  - Firebase (2.5.0)
+  - GoogleMaps (1.11.1)
+  - SwiftValidator (3.0.1)
+  - SWXMLHash (2.0.2)
+
+DEPENDENCIES:
+  - AFDateHelper
+  - Alamofire (~> 3.0)
+  - AlamofireImage (~> 2.0)
+  - AmazonS3RequestManager (~> 0.8)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - Firebase (>= 2.4.3)
+  - GoogleMaps
+  - SwiftValidator (= 3.0.1)
+
+SPEC CHECKSUMS:
+  AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
+  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
+  AmazonS3RequestManager: c17ed840dfee8412c22f501516769a2010e39ac6
+  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
+  FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
+  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
+  GoogleMaps: c947160008f414c66707a5ea60f35e92055c7670
+  SwiftValidator: c59223144754045d7691febdc3b3ecc2e73b609c
+  SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
+
+COCOAPODS: 0.39.0
