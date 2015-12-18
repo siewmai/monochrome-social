@@ -12,6 +12,7 @@
 		2CDFEE8E1C23EA5D007BF68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8C1C23EA5D007BF68E /* Main.storyboard */; };
 		2CDFEE901C23EA5D007BF68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */; };
 		2CDFEE931C23EA5D007BF68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE911C23EA5D007BF68E /* LaunchScreen.storyboard */; };
+		2CDFEE9B1C23EA8A007BF68E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE9A1C23EA8A007BF68E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CDFEE921C23EA5D007BF68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CDFEE941C23EA5D007BF68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CDFEE9A1C23EA8A007BF68E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		2CDFEE7C1C23EA5D007BF68E = {
 			isa = PBXGroup;
 			children = (
+				2CDFEE9A1C23EA8A007BF68E /* .gitignore */,
 				2CDFEE871C23EA5D007BF68E /* monochrome-social */,
 				2CDFEE861C23EA5D007BF68E /* Products */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDFEE9B1C23EA8A007BF68E /* .gitignore in Resources */,
 				2CDFEE931C23EA5D007BF68E /* LaunchScreen.storyboard in Resources */,
 				2CDFEE901C23EA5D007BF68E /* Assets.xcassets in Resources */,
 				2CDFEE8E1C23EA5D007BF68E /* Main.storyboard in Resources */,
@@ -250,8 +254,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "monochrome-social/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.monochrome.monochrome-social";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monochrome.social;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -261,8 +266,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "monochrome-social/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.monochrome.monochrome-social";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monochrome.social;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
