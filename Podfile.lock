@@ -27,6 +27,7 @@ PODS:
     - FBSDKCoreKit
   - Firebase (2.5.0)
   - GoogleMaps (1.11.1)
+  - ICSPullToRefresh (0.3)
   - SwiftValidator (3.0.1)
   - SWXMLHash (2.0.2)
 
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - Firebase (>= 2.4.3)
   - GoogleMaps
+  - ICSPullToRefresh (~> 0.3)
   - SwiftValidator (= 3.0.1)
 
 SPEC CHECKSUMS:
@@ -53,6 +55,7 @@ SPEC CHECKSUMS:
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
   GoogleMaps: c947160008f414c66707a5ea60f35e92055c7670
+  ICSPullToRefresh: 6ccda740c475f7e6dc157553518bfae32fa2cb57
   SwiftValidator: c59223144754045d7691febdc3b3ecc2e73b609c
   SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
 

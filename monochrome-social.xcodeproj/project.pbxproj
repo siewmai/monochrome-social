@@ -8,23 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		2CDFEE891C23EA5D007BF68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */; };
-		2CDFEE8B1C23EA5D007BF68E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8A1C23EA5D007BF68E /* ViewController.swift */; };
 		2CDFEE8E1C23EA5D007BF68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8C1C23EA5D007BF68E /* Main.storyboard */; };
 		2CDFEE901C23EA5D007BF68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */; };
 		2CDFEE931C23EA5D007BF68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE911C23EA5D007BF68E /* LaunchScreen.storyboard */; };
 		2CDFEE9B1C23EA8A007BF68E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE9A1C23EA8A007BF68E /* .gitignore */; };
+		2CDFEEA11C23ED5B007BF68E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEA01C23ED5B007BF68E /* Config.swift */; };
+		2CDFEEA31C23F1B9007BF68E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEA21C23F1B9007BF68E /* SigninViewController.swift */; };
+		2CDFEEA51C23F2F6007BF68E /* MonoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEA41C23F2F6007BF68E /* MonoButton.swift */; };
+		2CDFEEA71C2408F3007BF68E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEA61C2408F3007BF68E /* Profile.swift */; };
+		2CDFEEA91C2409C7007BF68E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEA81C2409C7007BF68E /* Constant.swift */; };
+		2CDFEEAC1C241E0B007BF68E /* ActivityIndicatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEAB1C241E0B007BF68E /* ActivityIndicatorService.swift */; };
+		2CDFEEAE1C241F4B007BF68E /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEAD1C241F4B007BF68E /* MessageService.swift */; };
+		2CDFEEB11C242582007BF68E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEB01C242582007BF68E /* PostTableViewCell.swift */; };
+		2CDFEEB31C2425B1007BF68E /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEB21C2425B1007BF68E /* ProfileImageView.swift */; };
+		2CDFEEB51C242614007BF68E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEB41C242614007BF68E /* Post.swift */; };
+		2CDFEEB71C24265B007BF68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEB61C24265B007BF68E /* User.swift */; };
+		2CDFEEB91C2426C3007BF68E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEB81C2426C3007BF68E /* HomeViewController.swift */; };
+		2CDFEEBC1C24322D007BF68E /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEBB1C24322D007BF68E /* StatusTableViewCell.swift */; };
+		2CDFEEBE1C243273007BF68E /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEBD1C243273007BF68E /* PictureTableViewCell.swift */; };
+		2CDFEEC01C2432A2007BF68E /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEBF1C2432A2007BF68E /* LocationTableViewCell.swift */; };
+		2CDFEEC21C2432B7007BF68E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEC11C2432B7007BF68E /* Place.swift */; };
+		2CDFEEC41C243302007BF68E /* CreatePostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEC31C243302007BF68E /* CreatePostTableViewController.swift */; };
+		2CDFEEC81C245288007BF68E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEC71C245288007BF68E /* PostView.swift */; };
+		2CDFEECA1C246EC1007BF68E /* AmazonS3Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEEC91C246EC1007BF68E /* AmazonS3Service.swift */; };
+		2CDFEECC1C247FB2007BF68E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEECB1C247FB2007BF68E /* Extension.swift */; };
+		2CDFEED01C25254B007BF68E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEECF1C25254B007BF68E /* TestViewController.swift */; };
 		E8F24B2C8EC296347AB47664 /* Pods_monochrome_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671D65A59975B7AE747FD401 /* Pods_monochrome_social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CDFEE851C23EA5D007BF68E /* monochrome-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "monochrome-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CDFEE8A1C23EA5D007BF68E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CDFEE8D1C23EA5D007BF68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CDFEE921C23EA5D007BF68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CDFEE941C23EA5D007BF68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CDFEE9A1C23EA8A007BF68E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2CDFEEA01C23ED5B007BF68E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2CDFEEA21C23F1B9007BF68E /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		2CDFEEA41C23F2F6007BF68E /* MonoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonoButton.swift; sourceTree = "<group>"; };
+		2CDFEEA61C2408F3007BF68E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2CDFEEA81C2409C7007BF68E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		2CDFEEAB1C241E0B007BF68E /* ActivityIndicatorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorService.swift; sourceTree = "<group>"; };
+		2CDFEEAD1C241F4B007BF68E /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		2CDFEEB01C242582007BF68E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2CDFEEB21C2425B1007BF68E /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		2CDFEEB41C242614007BF68E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2CDFEEB61C24265B007BF68E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CDFEEB81C2426C3007BF68E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2CDFEEBB1C24322D007BF68E /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		2CDFEEBD1C243273007BF68E /* PictureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
+		2CDFEEBF1C2432A2007BF68E /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		2CDFEEC11C2432B7007BF68E /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		2CDFEEC31C243302007BF68E /* CreatePostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostTableViewController.swift; sourceTree = "<group>"; };
+		2CDFEEC71C245288007BF68E /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		2CDFEEC91C246EC1007BF68E /* AmazonS3Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonS3Service.swift; sourceTree = "<group>"; };
+		2CDFEECB1C247FB2007BF68E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2CDFEECF1C25254B007BF68E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		47D324BA66B4CCBEB25E0428 /* Pods-monochrome-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monochrome-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social.debug.xcconfig"; sourceTree = "<group>"; };
 		671D65A59975B7AE747FD401 /* Pods_monochrome_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_monochrome_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E463500036B718CBB39084AE /* Pods-monochrome-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monochrome-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-monochrome-social/Pods-monochrome-social.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,14 +104,90 @@
 		2CDFEE871C23EA5D007BF68E /* monochrome-social */ = {
 			isa = PBXGroup;
 			children = (
-				2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */,
-				2CDFEE8A1C23EA5D007BF68E /* ViewController.swift */,
+				2CDFEEAA1C241D9F007BF68E /* Service */,
+				2CDFEE9C1C23ED00007BF68E /* Model */,
+				2CDFEE9D1C23ED09007BF68E /* View */,
+				2CDFEE9E1C23ED0F007BF68E /* Controller */,
 				2CDFEE8C1C23EA5D007BF68E /* Main.storyboard */,
-				2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */,
-				2CDFEE911C23EA5D007BF68E /* LaunchScreen.storyboard */,
-				2CDFEE941C23EA5D007BF68E /* Info.plist */,
+				2CDFEE9F1C23ED29007BF68E /* Supporting Files */,
 			);
 			path = "monochrome-social";
+			sourceTree = "<group>";
+		};
+		2CDFEE9C1C23ED00007BF68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEA61C2408F3007BF68E /* Profile.swift */,
+				2CDFEEB41C242614007BF68E /* Post.swift */,
+				2CDFEEB61C24265B007BF68E /* User.swift */,
+				2CDFEEC11C2432B7007BF68E /* Place.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2CDFEE9D1C23ED09007BF68E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEBA1C2431F7007BF68E /* CreatePostTableViewCell */,
+				2CDFEEAF1C24255D007BF68E /* PostTableViewCell */,
+				2CDFEEA41C23F2F6007BF68E /* MonoButton.swift */,
+				2CDFEEB21C2425B1007BF68E /* ProfileImageView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2CDFEE9E1C23ED0F007BF68E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEA21C23F1B9007BF68E /* SigninViewController.swift */,
+				2CDFEEB81C2426C3007BF68E /* HomeViewController.swift */,
+				2CDFEEC31C243302007BF68E /* CreatePostTableViewController.swift */,
+				2CDFEECF1C25254B007BF68E /* TestViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2CDFEE9F1C23ED29007BF68E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEE941C23EA5D007BF68E /* Info.plist */,
+				2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */,
+				2CDFEE911C23EA5D007BF68E /* LaunchScreen.storyboard */,
+				2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */,
+				2CDFEEA01C23ED5B007BF68E /* Config.swift */,
+				2CDFEEA81C2409C7007BF68E /* Constant.swift */,
+				2CDFEECB1C247FB2007BF68E /* Extension.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CDFEEAA1C241D9F007BF68E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEAB1C241E0B007BF68E /* ActivityIndicatorService.swift */,
+				2CDFEEAD1C241F4B007BF68E /* MessageService.swift */,
+				2CDFEEC91C246EC1007BF68E /* AmazonS3Service.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2CDFEEAF1C24255D007BF68E /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEB01C242582007BF68E /* PostTableViewCell.swift */,
+				2CDFEEC71C245288007BF68E /* PostView.swift */,
+			);
+			name = PostTableViewCell;
+			sourceTree = "<group>";
+		};
+		2CDFEEBA1C2431F7007BF68E /* CreatePostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFEEBB1C24322D007BF68E /* StatusTableViewCell.swift */,
+				2CDFEEBD1C243273007BF68E /* PictureTableViewCell.swift */,
+				2CDFEEBF1C2432A2007BF68E /* LocationTableViewCell.swift */,
+			);
+			name = CreatePostTableViewCell;
 			sourceTree = "<group>";
 		};
 		A061349A5B8419AEEC0674D8 /* Pods */ = {
@@ -214,8 +330,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CDFEE8B1C23EA5D007BF68E /* ViewController.swift in Sources */,
+				2CDFEEA51C23F2F6007BF68E /* MonoButton.swift in Sources */,
+				2CDFEEA71C2408F3007BF68E /* Profile.swift in Sources */,
+				2CDFEED01C25254B007BF68E /* TestViewController.swift in Sources */,
+				2CDFEEC01C2432A2007BF68E /* LocationTableViewCell.swift in Sources */,
+				2CDFEEB31C2425B1007BF68E /* ProfileImageView.swift in Sources */,
+				2CDFEEBC1C24322D007BF68E /* StatusTableViewCell.swift in Sources */,
 				2CDFEE891C23EA5D007BF68E /* AppDelegate.swift in Sources */,
+				2CDFEEA11C23ED5B007BF68E /* Config.swift in Sources */,
+				2CDFEEAC1C241E0B007BF68E /* ActivityIndicatorService.swift in Sources */,
+				2CDFEEAE1C241F4B007BF68E /* MessageService.swift in Sources */,
+				2CDFEECC1C247FB2007BF68E /* Extension.swift in Sources */,
+				2CDFEEC81C245288007BF68E /* PostView.swift in Sources */,
+				2CDFEEC21C2432B7007BF68E /* Place.swift in Sources */,
+				2CDFEEBE1C243273007BF68E /* PictureTableViewCell.swift in Sources */,
+				2CDFEEC41C243302007BF68E /* CreatePostTableViewController.swift in Sources */,
+				2CDFEECA1C246EC1007BF68E /* AmazonS3Service.swift in Sources */,
+				2CDFEEA31C23F1B9007BF68E /* SigninViewController.swift in Sources */,
+				2CDFEEB71C24265B007BF68E /* User.swift in Sources */,
+				2CDFEEB51C242614007BF68E /* Post.swift in Sources */,
+				2CDFEEA91C2409C7007BF68E /* Constant.swift in Sources */,
+				2CDFEEB91C2426C3007BF68E /* HomeViewController.swift in Sources */,
+				2CDFEEB11C242582007BF68E /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

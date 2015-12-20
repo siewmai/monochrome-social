@@ -15,5 +15,6 @@ pod 'SwiftValidator', '3.0.1'
 pod 'AmazonS3RequestManager', '~> 0.8'
 pod 'AFDateHelper'
 pod 'GoogleMaps'
+pod 'ICSPullToRefresh', '~> 0.3'
 end
 
