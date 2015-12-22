@@ -59,9 +59,6 @@ class StatusTableViewCell: UITableViewCell, UITextViewDelegate{
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if text == "#" {
-            self.delegate?.insertTagDidBegin()
-        }
         return true
     }
 }

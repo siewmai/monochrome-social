@@ -13,6 +13,7 @@ struct Constant {
     static let segueMainController = "mainController"
     static let segueCreatePost = "createPost"
     static let colorShadow =  UIColor(red: 157.0 / 255.0, green: 157.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
+    static let colorTheme =  UIColor(red: 63.0 / 255.0, green: 63.0 / 255.0, blue: 63.0 / 255.0, alpha: 1.0)
     static let keyUID = "uid"
 
 }

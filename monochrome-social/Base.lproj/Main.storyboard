@@ -108,26 +108,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-portrait" translatesAutoresizingMaskIntoConstraints="NO" id="4eY-TO-fs4">
-                                <rect key="frame" x="20" y="105" width="560" height="308"/>
-                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-oa-cfQ" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="4eY-TO-fs4" secondAttribute="trailing" id="Sxx-NS-R1e">
-                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                            </constraint>
-                            <constraint firstItem="OmG-bF-lSl" firstAttribute="top" secondItem="4eY-TO-fs4" secondAttribute="bottom" constant="187" id="Xvz-1C-gje"/>
-                            <constraint firstItem="4eY-TO-fs4" firstAttribute="leading" secondItem="7lh-aR-GJG" secondAttribute="leadingMargin" id="emv-85-tMD">
-                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                            </constraint>
-                            <constraint firstItem="4eY-TO-fs4" firstAttribute="top" secondItem="wnN-3g-yAI" secondAttribute="bottom" constant="85" id="yjD-SS-3Bq"/>
+                            <constraint firstItem="e7C-oa-cfQ" firstAttribute="leading" secondItem="7lh-aR-GJG" secondAttribute="leading" id="O7D-F6-Jp6"/>
+                            <constraint firstItem="OmG-bF-lSl" firstAttribute="top" secondItem="e7C-oa-cfQ" secondAttribute="bottom" id="lb9-4C-HK2"/>
+                            <constraint firstItem="e7C-oa-cfQ" firstAttribute="top" secondItem="7lh-aR-GJG" secondAttribute="top" id="x5c-jo-3bB"/>
+                            <constraint firstAttribute="trailing" secondItem="e7C-oa-cfQ" secondAttribute="trailing" id="yCl-Od-DZO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageSlideShow" destination="e7C-oa-cfQ" id="ufn-DS-PeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDF-Xt-8mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="1221"/>
+            <point key="canvasLocation" x="427" y="1729"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XkK-hE-XNd">
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="1852" y="667"/>
         </scene>
-        <!--Monochrome-->
+        <!--Home View Controller-->
         <scene sceneID="WqL-6j-q00">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="p4J-HQ-eQH" customClass="HomeViewController" customModule="monochrome_social" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,7 +231,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3C-4r-hlj">
                                                                     <rect key="frame" x="0.0" y="94" width="560" height="250"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Fh-1pZ">
+                                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Fh-1pZ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="560" height="250"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="250" id="1Qk-IY-4he"/>
@@ -395,16 +395,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-eo-CRr">
-                                <rect key="frame" x="250" y="72" width="100" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-eo-CRr">
+                                <rect key="frame" x="255" y="72" width="90" height="24"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="khl-cz-LSQ"/>
-                                    <constraint firstAttribute="width" constant="100" id="uYX-Ep-Pnc"/>
+                                    <constraint firstAttribute="height" constant="24" id="khl-cz-LSQ"/>
+                                    <constraint firstAttribute="width" constant="90" id="uYX-Ep-Pnc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="↑ New Feeds">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loadNewFeeds:" destination="p4J-HQ-eQH" eventType="touchUpInside" id="bBT-qc-VEM"/>
@@ -421,16 +421,16 @@
                             <constraint firstAttribute="trailing" secondItem="MQh-tY-cVD" secondAttribute="trailing" id="wRI-dG-xXT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Monochrome" id="Lig-dp-pZK">
+                    <navigationItem key="navigationItem" id="Lig-dp-pZK">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="compose" id="aiu-ao-IfP">
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="CbJ-YJ-S4o" kind="presentation" identifier="createPost" modalPresentationStyle="formSheet" id="Tfv-re-0Uz"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="search" id="6NE-NL-lZM">
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -597,7 +597,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="287"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiz-cM-OrL">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiz-cM-OrL">
                                             <rect key="frame" x="8" y="8" width="584" height="271"/>
                                         </imageView>
                                         <view clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-hD-YkJ">
@@ -626,8 +626,12 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Eiz-cM-OrL" firstAttribute="leading" secondItem="DLS-x4-QiO" secondAttribute="leadingMargin" id="8VN-cF-dHP"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Eiz-cM-OrL" secondAttribute="trailing" id="CSj-0R-5Sm"/>
+                                        <constraint firstItem="Eiz-cM-OrL" firstAttribute="leading" secondItem="DLS-x4-QiO" secondAttribute="leadingMargin" id="8VN-cF-dHP">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Eiz-cM-OrL" secondAttribute="trailing" id="CSj-0R-5Sm">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                        </constraint>
                                         <constraint firstAttribute="trailingMargin" secondItem="lNv-hD-YkJ" secondAttribute="trailing" constant="8" id="Oqq-at-YTa"/>
                                         <constraint firstItem="Eiz-cM-OrL" firstAttribute="top" secondItem="DLS-x4-QiO" secondAttribute="topMargin" id="XvH-kN-XQk"/>
                                         <constraint firstItem="lNv-hD-YkJ" firstAttribute="top" secondItem="DLS-x4-QiO" secondAttribute="topMargin" constant="8" id="oa7-zL-4Dl"/>
@@ -645,20 +649,7 @@
                             <outlet property="delegate" destination="etP-Cl-Dyz" id="YWz-E2-gL9"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem image="camera" style="plain" id="Wfr-SZ-xB0">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="addPicture:" destination="etP-Cl-Dyz" id="SvP-7S-lwI"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem image="location" id="eBF-C2-QTE">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="getLocation:" destination="etP-Cl-Dyz" id="06g-Re-GJT"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Compose" id="HpZ-Ty-NNc">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jst-cs-yOH">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -674,7 +665,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPictureButton" destination="Wfr-SZ-xB0" id="JyC-4C-tVW"/>
                         <outlet property="publishButton" destination="5Tl-xb-VEb" id="S3d-1Q-sUb"/>
                     </connections>
                 </tableViewController>
@@ -685,7 +675,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lJq-sd-BGV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CbJ-YJ-S4o" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CbJ-YJ-S4o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kCD-m2-vKI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -711,7 +701,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" width="32" height="32"/>
         <image name="city" width="24" height="24"/>
         <image name="comments" width="32" height="32"/>
         <image name="facebook" width="24" height="24"/>
@@ -719,9 +708,7 @@
         <image name="gear-outline" width="32" height="32"/>
         <image name="home" width="32" height="32"/>
         <image name="home-outline" width="32" height="32"/>
-        <image name="image-portrait" width="600" height="800"/>
         <image name="like-outline" width="32" height="32"/>
-        <image name="location" width="32" height="32"/>
         <image name="logo" width="64" height="64"/>
         <image name="more" width="32" height="32"/>
         <image name="person" width="100" height="100"/>

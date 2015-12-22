@@ -33,19 +33,17 @@ class PictureTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         removeView.layer.cornerRadius = removeView.frame.width / 2
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        //aspectConstraint = nil
+        aspectConstraint = nil
     }
     
     func configure(index:Int, image : UIImage) {
         self.index = index
         let aspect = image.size.height / image.size.width
-       // imageView?.frame.height = image.size.width * aspect
         aspectConstraint = NSLayoutConstraint(item: pictureImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: pictureImageView, attribute: NSLayoutAttribute.Width, multiplier: aspect, constant: 0.0)
         
         pictureImageView.image = image

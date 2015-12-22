@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C6A4AA01C28033C00C44E73 /* ImageSlideShowSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4A9F1C28033C00C44E73 /* ImageSlideShowSource.swift */; };
+		2C9D15101C283A6C0082CD78 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D150F1C283A6C0082CD78 /* PicturesViewController.swift */; };
 		2CDFEE891C23EA5D007BF68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */; };
 		2CDFEE8E1C23EA5D007BF68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8C1C23EA5D007BF68E /* Main.storyboard */; };
 		2CDFEE901C23EA5D007BF68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFEE8F1C23EA5D007BF68E /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C6A4A9F1C28033C00C44E73 /* ImageSlideShowSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlideShowSource.swift; sourceTree = "<group>"; };
+		2C9D150F1C283A6C0082CD78 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		2CDFEE851C23EA5D007BF68E /* monochrome-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "monochrome-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDFEE881C23EA5D007BF68E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CDFEE8D1C23EA5D007BF68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				2CDFEEAF1C24255D007BF68E /* PostTableViewCell */,
 				2CDFEEA41C23F2F6007BF68E /* MonoButton.swift */,
 				2CDFEEB21C2425B1007BF68E /* ProfileImageView.swift */,
+				2C6A4A9F1C28033C00C44E73 /* ImageSlideShowSource.swift */,
+				2C9D150F1C283A6C0082CD78 /* PicturesViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				2CDFEED01C25254B007BF68E /* TestViewController.swift in Sources */,
 				2CDFEEC01C2432A2007BF68E /* LocationTableViewCell.swift in Sources */,
 				2CDFEEB31C2425B1007BF68E /* ProfileImageView.swift in Sources */,
+				2C9D15101C283A6C0082CD78 /* PicturesViewController.swift in Sources */,
 				2CDFEEBC1C24322D007BF68E /* StatusTableViewCell.swift in Sources */,
 				2CDFEE891C23EA5D007BF68E /* AppDelegate.swift in Sources */,
 				2CDFEEA11C23ED5B007BF68E /* Config.swift in Sources */,
@@ -346,6 +353,7 @@
 				2CDFEEBE1C243273007BF68E /* PictureTableViewCell.swift in Sources */,
 				2CDFEEC41C243302007BF68E /* CreatePostTableViewController.swift in Sources */,
 				2CDFEECA1C246EC1007BF68E /* AmazonS3Service.swift in Sources */,
+				2C6A4AA01C28033C00C44E73 /* ImageSlideShowSource.swift in Sources */,
 				2CDFEEA31C23F1B9007BF68E /* SigninViewController.swift in Sources */,
 				2CDFEEB71C24265B007BF68E /* User.swift in Sources */,
 				2CDFEEB51C242614007BF68E /* Post.swift in Sources */,

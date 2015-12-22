@@ -13,7 +13,8 @@ import GoogleMaps
 class CreatePostTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, StatusTableViewCellDelegate, LocationTableViewCellDelegate, PictureTableViewCellDelegate {
     
     @IBOutlet weak var publishButton: UIBarButtonItem!
-    @IBOutlet weak var addPictureButton: UIBarButtonItem!
+    var addPictureButton: UIBarButtonItem!
+    var getLocationBtton: UIBarButtonItem!
     
     var uid: String!
     var ref: Firebase!
@@ -28,6 +29,9 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
     var isInsertTag = false
     
     var placePicker: GMSPlacePicker?
+    
+    var offset = CGFloat(0)
+    var currentHeight: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,27 +55,27 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
         let config = GMSPlacePickerConfig(viewport: viewport)
         placePicker = GMSPlacePicker(config: config)
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override var inputAccessoryView: UIView {
+        let toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, view.frame.size.width, 50))
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.barTintColor = UIColor.whiteColor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        addPictureButton = UIBarButtonItem(image: UIImage(named: "camera"), style: .Plain, target: self, action: Selector("addPicture:"))
+        addPictureButton.tintColor = UIColor.darkGrayColor()
+        
+        getLocationBtton = UIBarButtonItem(image: UIImage(named: "location"), style: .Plain, target: self, action: Selector("getLocation:"))
+        getLocationBtton.tintColor = UIColor.darkGrayColor()
+        
+        toolbar.items = [addPictureButton, getLocationBtton]
+        return toolbar
     }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            if let nav = self.navigationController {
-                nav.view.frame.size.height -= keyboardSize.height
-            }
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            if let nav = self.navigationController {
-                nav.view.frame.size.height += keyboardSize.height
-            }
-        }
-    }
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -129,7 +133,7 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
         }
     }
     
-    @IBAction func addPicture(sender: UIBarButtonItem) {
+    func addPicture(sender: UIBarButtonItem) {
         let options = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let library = UIAlertAction(title: "Choose from library", style: UIAlertActionStyle.Default) { action in
@@ -156,8 +160,7 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
         presentViewController(options, animated: true, completion: nil)
     }
     
-    @IBAction func getLocation(sender: UIBarButtonItem) {
-        
+    func getLocation(sender: UIBarButtonItem) {
         placePicker?.pickPlaceWithCallback({ (place: GMSPlace?, error: NSError?) -> Void in
             if let error = error {
                 print("Pick Place error: \(error.localizedDescription)")
@@ -171,6 +174,7 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
     }
     
     @IBAction func cancel(sender: AnyObject) {
+        view.endEditing(true)
         presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -266,7 +270,6 @@ class CreatePostTableViewController: UITableViewController, UIImagePickerControl
     func statusDidEndEditing(newStatus: String) {
         status = newStatus
         tableView.reloadData()
-        
         updatePublishButtonState()
     }
     

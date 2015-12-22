@@ -62,7 +62,7 @@ class PostTableViewCell: UITableViewCell {
         pictureContainerView.hidden = true
         if let pictures = post.pictures where pictures.count > 0 {
             pictureContainerView.hidden = false
-            let url = NSURL(string: pictures.values.first!)!
+            let url = NSURL(string: pictures[0])!
             pictureImageView.af_setImageWithURLRequest(NSURLRequest(URL: url), placeholderImage: self.picturePlaceholder, filter: nil, imageTransition: .CrossDissolve(0.2), completion: { response in
                 if pictures.count > 1 {
                     self.numberOfPictureLabel.text = "\(pictures.count)"

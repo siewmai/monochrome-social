@@ -16,5 +16,6 @@ pod 'AmazonS3RequestManager', '~> 0.8'
 pod 'AFDateHelper'
 pod 'GoogleMaps'
 pod 'ICSPullToRefresh', '~> 0.3'
+pod 'ImageSlideshow', '~> 0.2.2'
 end
 

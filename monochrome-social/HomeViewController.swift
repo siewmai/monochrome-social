@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import ICSPullToRefresh
+import ImageSlideshow
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,9 +25,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var loadedPosts = [Post]()
     
     var initialAdd = true
+    var transitionDelegate: ZoomAnimatedTransitioningDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.titleView = UIImageView(image: UIImage(named: "home-title"))
+        
         uid = NSUserDefaults.standardUserDefaults().valueForKey(Constant.keyUID) as! String
         ref = Firebase(url: "\(Config.firebaseUrl)")
         
@@ -37,7 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.estimatedRowHeight = 44
         
         newFeedsButton.hidden = true
-        newFeedsButton.layer.cornerRadius = 15.0
+        newFeedsButton.layer.cornerRadius = 12.0
         newFeedsButton.layer.shadowColor = Constant.colorShadow.CGColor
         newFeedsButton.layer.shadowOpacity = 0.2
         newFeedsButton.layer.shadowRadius = 1.0
@@ -63,9 +67,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
         if initialAdd {
             ref.childByAppendingPath("feeds").childByAppendingPath(uid).queryLimitedToLast(pagesize).observeSingleEventOfType(.Value, withBlock: { snapshot in
-                self.posts = self.loadedPosts.reverse()
-                self.tableView.separatorStyle = .SingleLine
-                self.tableView.reloadData()
+                if snapshot.children.allObjects.count > 0 {
+                    self.posts = self.loadedPosts.reverse()
+                    self.tableView.separatorStyle = .SingleLine
+                    self.tableView.reloadData()
+                }
                 self.initialAdd = false
                 ActivityIndicatorService.instance.hide()
             })
@@ -99,6 +105,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("cell") as? PostTableViewCell {
             cell.configure(post)
+            let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "presentSlideShow:")
+            cell.pictureImageView.addGestureRecognizer(tap)
+            cell.pictureImageView.tag = indexPath.row
             return cell
         } else {
             let cell = PostTableViewCell()
@@ -126,15 +135,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.posts.insertContentsOf(morePosts.reverse(), at: self.posts.count)
                 }
             })
-
         }
     }
     
     @IBAction func loadNewFeeds(sender: AnyObject) {
         posts = loadedPosts.reverse()
+        tableView.separatorStyle = .SingleLine
         tableView.reloadData()
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
         newFeedsButton.hidden = true
+    }
+    
+    func presentSlideShow(sender: UITapGestureRecognizer) {
+        if sender.state == .Ended {
+            if let pictureView = sender.view as? UIImageView {
+                if pictureView.tag < posts.count {
+                    let picturesViewController = PicturesViewController()
+                    let post = posts[pictureView.tag]
+                    print(post.pictures)
+                    if let urls = post.pictures {
+                        var inputs = [ImageSlideShowSource]()
+                        for url in urls {
+                            print(url)
+                            inputs.append(ImageSlideShowSource(urlString: url)!)
+                        }
+                        picturesViewController.inputs = inputs
+                        self.presentViewController(picturesViewController, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
 }
