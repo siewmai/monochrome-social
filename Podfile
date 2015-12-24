@@ -17,5 +17,6 @@ pod 'AFDateHelper'
 pod 'GoogleMaps'
 pod 'ICSPullToRefresh', '~> 0.3'
 pod 'ImageSlideshow', '~> 0.2.2'
+pod 'ActiveLabel'
 end
 

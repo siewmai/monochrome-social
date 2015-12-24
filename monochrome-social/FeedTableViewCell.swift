@@ -1,5 +1,5 @@
 //
-//  PostTableViewCell.swift
+//  FeedTableViewCell.swift
 //  monochrome-social
 //
 //  Created by Siew Mai Chan on 18/12/2015.
@@ -11,7 +11,7 @@ import AlamofireImage
 import AFDateHelper
 import Firebase
 
-class PostTableViewCell: UITableViewCell {
+class FeedTableViewCell: UITableViewCell {
     
     var ref: Firebase!
     

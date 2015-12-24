@@ -15,6 +15,7 @@ class Post {
     private var _creator: String
     private var _status: String?
     private var _pictures: [String]?
+    private var _location: String?
     private var _timestamp: NSTimeInterval
     
     var key: String {
@@ -33,6 +34,10 @@ class Post {
         return _pictures
     }
     
+    var location: String? {
+        return _location
+    }
+    
     var timestamp: NSTimeInterval {
         return _timestamp
     }
@@ -44,6 +49,9 @@ class Post {
         self._status = dictionary["status"] as? String
         if let pictures = dictionary["pictures"] as? Dictionary<String, String> {
             self._pictures = pictures.sort({ $0.0 < $1.0}).map({ return $0.1 })
+        }
+        if let location = dictionary["location"] as? Dictionary<String, String> {
+            self._location = location["name"]
         }
         self._timestamp = dictionary["timestamp"] as! NSTimeInterval
     }

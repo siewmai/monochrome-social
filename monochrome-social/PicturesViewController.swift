@@ -26,7 +26,6 @@ public class PicturesViewController: UIViewController {
         slideshow.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         
         if let inputs = inputs {
-            print(inputs)
             slideshow.setImageInputs(inputs)
         }
         slideshow.frame = self.view.frame
@@ -42,6 +41,7 @@ public class PicturesViewController: UIViewController {
     
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        print(initialPage)
         slideshow.setCurrentPage(initialPage, animated: false)
     }
     

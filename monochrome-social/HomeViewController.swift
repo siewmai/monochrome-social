@@ -30,6 +30,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: UIImage(named: "home-title"))
+        navigationController?.navigationBar.backIndicatorImage = UIImage(named: "back")
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         uid = NSUserDefaults.standardUserDefaults().valueForKey(Constant.keyUID) as! String
         ref = Firebase(url: "\(Config.firebaseUrl)")
@@ -103,14 +106,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        if let cell = tableView.dequeueReusableCellWithIdentifier("cell") as? PostTableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? FeedTableViewCell {
             cell.configure(post)
-            let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "presentSlideShow:")
-            cell.pictureImageView.addGestureRecognizer(tap)
-            cell.pictureImageView.tag = indexPath.row
+            cell.selectionStyle = .None
             return cell
         } else {
-            let cell = PostTableViewCell()
+            let cell = FeedTableViewCell()
             cell.configure(post)
             return cell
         }
@@ -147,21 +148,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         newFeedsButton.hidden = true
     }
     
-    func presentSlideShow(sender: UITapGestureRecognizer) {
-        if sender.state == .Ended {
-            if let pictureView = sender.view as? UIImageView {
-                if pictureView.tag < posts.count {
-                    let picturesViewController = PicturesViewController()
-                    let post = posts[pictureView.tag]
-                    print(post.pictures)
-                    if let urls = post.pictures {
-                        var inputs = [ImageSlideShowSource]()
-                        for url in urls {
-                            print(url)
-                            inputs.append(ImageSlideShowSource(urlString: url)!)
-                        }
-                        picturesViewController.inputs = inputs
-                        self.presentViewController(picturesViewController, animated: true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constant.segueShowPost {
+            if let controller = segue.destinationViewController.contentViewController as? ShowPostViewController {
+                if let cell = sender as? UITableViewCell {
+                    let indexPath = tableView.indexPathForCell(cell)
+                    if let index = indexPath?.row {
+                        controller.post = posts[index]
                     }
                 }
             }

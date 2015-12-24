@@ -1,4 +1,5 @@
 PODS:
+  - ActiveLabel (0.2.2)
   - AFDateHelper (3.1.1)
   - Alamofire (3.1.4)
   - AlamofireImage (2.2.0):
@@ -35,6 +36,7 @@ PODS:
   - SWXMLHash (2.0.2)
 
 DEPENDENCIES:
+  - ActiveLabel
   - AFDateHelper
   - Alamofire (~> 3.0)
   - AlamofireImage (~> 2.0)
@@ -49,6 +51,7 @@ DEPENDENCIES:
   - SwiftValidator (= 3.0.1)
 
 SPEC CHECKSUMS:
+  ActiveLabel: cecbc4ddf9f798bbacfa361960c9ccaeadb9d6e1
   AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
   AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
